@@ -12,4 +12,4 @@ def mensaje():
 
 @app.get("/users/{user_id}")
 def mensaje(user_id):
-    return f"El id del usuario es: {user_id}"
+    return f"El id del usuario es: {user_id}
