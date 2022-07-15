@@ -1,7 +1,12 @@
 from fastapi import FastAPI
+from pydantic import BaseModel
 
 app = FastAPI()
 
+class Student(BaseModel):
+    name: str
+    lastname: str
+
 @app.post("/students")
-def saveStudent(name: str, lastname: str):
-    return f"Estudiante {name} {lastname} guardado!"
+def saveStudent(student: Student):
+    return f"Estudiante {student.name}: {student.lastname} guardado!"
