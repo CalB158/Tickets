@@ -9,4 +9,4 @@ class Student(BaseModel):
 
 @app.post("/students")
 def saveStudent(student: Student):
-    return f"Habilidades de {student.name}: {student.lastname}"
+    return f"Estudiantes {student.name}: {student.lastname} guardado"
